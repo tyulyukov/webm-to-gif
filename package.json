@@ -1,8 +1,33 @@
 {
   "name": "webm-to-gif",
-  "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Free online tool to convert WebM videos to GIF with transparency support. Runs entirely in your browser.",
   "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "tyulyukov",
+    "url": "https://github.com/tyulyukov"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tyulyukov/webm-to-gif.git"
+  },
+  "homepage": "https://github.com/tyulyukov/webm-to-gif",
+  "bugs": {
+    "url": "https://github.com/tyulyukov/webm-to-gif/issues"
+  },
+  "keywords": [
+    "webm",
+    "gif",
+    "converter",
+    "transparency",
+    "alpha-channel",
+    "video-converter",
+    "browser",
+    "client-side",
+    "react",
+    "typescript"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -15,6 +40,7 @@
     "@tailwindcss/vite": "^4.1.18",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "gif.js": "^0.2.0",
     "lucide-react": "^0.562.0",
     "radix-ui": "^1.4.3",
     "react": "^19.2.0",
@@ -26,6 +52,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
+    "@types/gif.js": "^0.2.5",
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",

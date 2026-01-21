@@ -1,73 +1,64 @@
-# React + TypeScript + Vite
+# WebM to GIF Converter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A free online tool to convert WebM videos to GIF format while preserving alpha channel transparency. All processing happens locally in your browser - no files are uploaded to any server.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Transparency Support** - Preserves alpha channel from WebM videos, creating GIFs with transparent backgrounds
+- **Privacy First** - Everything runs client-side using Web Workers, your files never leave your device
+- **Adjustable Settings**
+  - Frame rate (1-30 FPS)
+  - Quality (1-30)
+  - Transparency threshold (controls which alpha values become transparent)
+- **Drag & Drop** - Simply drop your WebM file or click to browse
+- **Live Preview** - See both source video and resulting GIF side by side
+- **Responsive Design** - Works on desktop and mobile devices
 
-## React Compiler
+## Usage
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Open the app in your browser
+2. Drag and drop a WebM file (or click to browse)
+3. Adjust settings if needed (click "Settings" to expand)
+4. Click "Convert to GIF"
+5. Download your transparent GIF
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS
+- gif.js (GIF encoding with Web Workers)
+- Lucide React (icons)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Development
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+```bash
+# Install dependencies
+npm install
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## How It Works
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. The WebM video is loaded into a `<video>` element
+2. Frames are extracted by seeking through the video and drawing each frame to a canvas
+3. For each frame, pixels with alpha values below the threshold are replaced with a transparent color marker
+4. gif.js encodes the frames using Web Workers for performance
+5. The transparent color is registered with the GIF encoder to create actual transparency
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## License
+
+MIT
+
+## Author
+
+[tyulyukov](https://github.com/tyulyukov)

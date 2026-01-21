@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Pig body -->
+  <ellipse cx="32" cy="42" rx="18" ry="14" fill="#F9A8B8"/>
+
+  <!-- Pig head -->
+  <circle cx="32" cy="24" r="16" fill="#FFB6C1"/>
+
+  <!-- Ears -->
+  <ellipse cx="18" cy="12" rx="5" ry="7" fill="#FFB6C1" transform="rotate(-20 18 12)"/>
+  <ellipse cx="18" cy="12" rx="3" ry="5" fill="#F9A8B8" transform="rotate(-20 18 12)"/>
+  <ellipse cx="46" cy="12" rx="5" ry="7" fill="#FFB6C1" transform="rotate(20 46 12)"/>
+  <ellipse cx="46" cy="12" rx="3" ry="5" fill="#F9A8B8" transform="rotate(20 46 12)"/>
+
+  <!-- Snout -->
+  <ellipse cx="32" cy="28" rx="8" ry="6" fill="#F9A8B8"/>
+  <circle cx="29" cy="28" r="2" fill="#E88A9A"/>
+  <circle cx="35" cy="28" r="2" fill="#E88A9A"/>
+
+  <!-- Eyes -->
+  <circle cx="26" cy="20" r="3" fill="#2D2D2D"/>
+  <circle cx="38" cy="20" r="3" fill="#2D2D2D"/>
+  <circle cx="27" cy="19" r="1" fill="#FFFFFF"/>
+  <circle cx="39" cy="19" r="1" fill="#FFFFFF"/>
+
+  <!-- Arms -->
+  <ellipse cx="18" cy="46" rx="5" ry="8" fill="#FFB6C1" transform="rotate(30 18 46)"/>
+  <ellipse cx="46" cy="46" rx="5" ry="8" fill="#FFB6C1" transform="rotate(-30 46 46)"/>
+
+  <!-- Laptop base -->
+  <rect x="12" y="50" width="40" height="4" rx="1" fill="#4A5568"/>
+
+  <!-- Laptop screen -->
+  <rect x="14" y="38" width="36" height="12" rx="1" fill="#2D3748"/>
+  <rect x="16" y="40" width="32" height="8" rx="0.5" fill="#68D391"/>
+
+  <!-- Screen content - code lines -->
+  <rect x="18" y="42" width="12" height="1" fill="#2D3748"/>
+  <rect x="18" y="44" width="8" height="1" fill="#2D3748"/>
+  <rect x="32" y="42" width="6" height="1" fill="#2D3748"/>
+  <rect x="32" y="44" width="10" height="1" fill="#2D3748"/>
+
+  <!-- Hooves on keyboard -->
+  <circle cx="22" cy="50" r="3" fill="#F9A8B8"/>
+  <circle cx="42" cy="50" r="3" fill="#F9A8B8"/>
+</svg>
