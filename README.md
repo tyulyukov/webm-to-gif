@@ -2,6 +2,10 @@
 
 A free online tool to convert WebM videos to GIF format while preserving alpha channel transparency. All processing happens locally in your browser - no files are uploaded to any server.
 
+## Live
+
+https://webm-to-gif.tyulyukov.com
+
 ## Features
 
 - **Transparency Support** - Preserves alpha channel from WebM videos, creating GIFs with transparent backgrounds
